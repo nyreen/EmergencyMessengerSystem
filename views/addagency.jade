@@ -1,0 +1,40 @@
+extends layout
+
+block content
+
+    script.
+        var addAgency = function() {
+            window.location.href = '\agencies';
+        }
+
+    #header
+
+    #body
+        #tabs
+            a(href='\messagenew', id="notifs") Notifications
+            a(href='\agencies', id="view") Agencies
+            a(href='\setparams', id="setparameters") Set Parameters
+            a(href='\adminlog', id="logs") Logs
+            button#outbtn(type="submit") Logout
+            br
+
+        // Wrapper
+        #wrapper
+
+            #addAgency
+                fieldset
+                    input#aName(type="text", placeholder="Agency Name", name="aname")
+                    br
+                    input#contactnum(type="text", placeholder="Contact Number", name="contactnum")
+                    br
+                    input#street(type="text", placeholder="Street", name="street")
+                    br
+                    input#brgy(type="text", placeholder="Barangay", name="brgy")
+                    br
+                    input#town(type="text", placeholder="Town", name="town")
+                    br
+                    button#btnAddAgency(onclick = 'addAgency()') Add Agency
+                    br
+
+    #footer
+        p © COPYRIGHT 2014 ALL RIGHTS RESERVED. Emergency Messenger System.

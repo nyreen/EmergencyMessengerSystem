@@ -1,0 +1,228 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin:0;
+  color:#000;
+  height:100%;
+}
+
+#list, #searched {
+	margin: 10px 0px 10px 40px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#header{
+	height: 115px;
+    padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 5px;
+	background-color: #145394;
+}
+
+#tabs{
+	height: 25px;
+	padding-left:20px;
+	position:relative;
+	margin-bottom: 10px;
+	background-color: #EDAB79;
+	border: solid 2px #014274;
+}
+
+#tabs a {
+	color: white;
+	display: block;
+	float: left;
+	height: 1.5em;
+	padding-left: 10px;
+	text-decoration: none;
+	text-align: center;
+}
+
+#tabs a:hover {
+	background-color: #3af;
+	background-position: 0 -120px;
+}
+
+#tabs a:hover span {
+	background-position: 100% -120px;
+}
+
+#wrapper {
+	height: 400px;
+	padding-left:20px;
+	position:relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-right: 50px;
+	margin-left: 50px;
+	background-color: #B4DBDD;
+}
+
+#userList {
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+#userList table {
+	border-collapse:separate;
+	border-spacing:1px;
+	width:100%;
+}
+		
+#userList table th {
+	background-color:#EEE;
+	font-weight:600;
+	padding:10px 20px;
+	text-align:center;
+	width: 33%;
+}
+		
+#userList table tbody {
+	padding:0; margin:0;
+	border-collapse:collapse;
+	height: 280px;
+	overflow:auto; 
+	float: left;
+    width: 100%;
+}
+
+#userList table thead {
+	overflow:auto; 
+	float: left;
+    width: 100%;
+}
+		
+#userList table td {
+	background:#FFF;
+	padding: 10px;
+	text-align:center;
+	width: 33%;
+}
+
+#userList a{
+	text-decoration: none;
+}
+
+fieldset {
+	border:0;
+	padding:0; margin:0;
+}
+
+#view,#logs{
+	width: 80px;
+	border-width: 2px;
+	border-radius: 4px;
+	margin-bottom: 5px;
+	font-family: Calibri;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#notifs{
+	width: 100px;
+	border-width: 2px;
+	border-radius: 4px;
+	margin-bottom: 5px;
+	font-family: Calibri;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#setparameters{
+	width: 140px;
+	border-width: 2px;
+	border-radius: 4px;
+	margin-bottom: 5px;
+	font-family: Calibri;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#outbtn{
+	height: 25px;
+	width: 60px;
+	border-width: 2px;
+	border-radius: 4px;
+	margin-right: 5px;
+	margin-left: 790px;
+	background-color: #B4DBDD;
+	font-family: Calibri;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#addbtn{
+	height: 25px;
+	width: 120px;
+	border-width: 2px;
+	border-radius: 4px;
+	background-color: #EDAB79;
+	font-family: Calibri;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#searchField{
+	margin-left: 40px;
+}
+
+#searchbtn{
+	margin-left: 10px;
+	height: 25px;
+	width: 80px;
+	border-width: 2px;
+	border-radius: 4px;
+	background-color: #EDAB79;
+	font-family: Calibri;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#savebtn{
+	margin-left: 10px;
+	height: 25px;
+	width: 80px;
+	border-width: 2px;
+	border-radius: 4px;
+	background-color: #B4DBDD;
+	font-family: Calibri;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#radius,#accuracy,#type,#aName,#contactnum,#street,#brgy,#town{
+	margin-bottom: 10px;
+	height: 25px;
+}
+
+#btnAddAgency{
+	margin-left: 10px;
+	height: 25px;
+	width: 140px;
+	border-width: 2px;
+	border-radius: 4px;
+	background-color: #B4DBDD;
+	font-family: Calibri;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#addSearch{
+	margin-left: 40px;
+}
+
+#footer {
+	padding:5px 10px;
+	background-color: #145394;
+	height: 30px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#footer p {
+		margin:0;
+		padding-top: 5px;
+		color: white;
+    }
