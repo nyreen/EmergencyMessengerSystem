@@ -17,9 +17,6 @@ var express = require('express'),
     routes = require('./routes/index'),
     users = require('./routes/users'),
 
-    server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080,
-    server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1',
-
     app = express(),
     lbsURL,
     mapURL,
@@ -41,15 +38,7 @@ var express = require('express'),
     auth = globe.Auth(appId, appSecret),
 
     callbackUrlPath = '/auth',
-    notifyUrlPath = '/messagenew'
-    db_name = 'sp2';
-
-    //provide a sensible default for local development
-    var mongodb_connection_string = 'mongodb://127.0.0.1:27017/' + db_name;
-    //take advantage of openshift env vars when available:
-    if(process.env.OPENSHIFT_MONGODB_DB_URL){
-      mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + db_name;
-    }
+    notifyUrlPath = '/messagenew';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -302,9 +291,5 @@ function mapRequest() {
         });
     });
 }
-
-app.listen(server_port, server_ip_address, function () {
-  console.log( "Listening on " + server_ip_address + ", port " + server_port )
-});
 
 module.exports = app;
