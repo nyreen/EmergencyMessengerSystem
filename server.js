@@ -38,11 +38,17 @@ var express = require('express'),
     auth = globe.Auth(appId, appSecret),
 
     callbackUrlPath = '/auth',
-    notifyUrlPath = '/messagenew';
+    notifyUrlPath = '/messagenew'
+
+    server_port = process.env.OPENSHIFT_NODEJS_PORT || '8080',
+    server = http.createServer(app),
+    server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+app.set('port', server_port);
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -291,5 +297,9 @@ function mapRequest() {
         });
     });
 }
+
+server.listen(server_port, server_ip_address, function () {
+  console.log( "Listening on " + server_ip_address + ", port " + server_port )
+});
 
 module.exports = app;
